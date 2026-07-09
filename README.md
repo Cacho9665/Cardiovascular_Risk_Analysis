@@ -27,7 +27,7 @@ Below is the streamlit dashboard here
 
 ---
 ## Summary
-After going through all the variables we come out with 6 that are more significant to predicting mortality than any of the others. Age, Ejection Fraction, Serum Creatinine, Serum Sodium, High Blood Pressure, and Anemia. Of course age isn't something we can control, but the compounding effects of each of these health issues have a real hurtful effect on quality and length of life. Below is an example of how compounding issues affect the proportion of deaths
+After going through all the variables we come out with 6 that are more significant to predicting mortality than any of the others. Age, Ejection Fraction, Serum Creatinine, Serum Sodium, High Blood Pressure, and Anemia. Of course age isn't something we can control, but the compounding effects of each of these health issues have a real hurtful effect on quality and length of life. Below is an example of how compounding issues affect the proportion of deaths, to the left of the vertical line and above the horizontal line are where issues start to arise.
 
 <img width="675" height="552" alt="image" src="https://github.com/user-attachments/assets/d427da1b-1796-4348-ad02-9c7e91294399" />
 
