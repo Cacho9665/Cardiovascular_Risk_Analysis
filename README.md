@@ -2,7 +2,7 @@
 Analyzation of heart failure clinical records to find which variables had the biggest effect on overall health.
 
 ## Project Overview
-This project analyzes a heart failure clinical records data set, [UCI Heart Failure Clinical Records dataset](https://github.com/vishnupriya62/DATASET-heart-failure-clinical-records/blob/main/heart_failure_clinical_records_dataset%20(1).csv), using Cox Proportional Hazards Model. Because of the nature of Survival Analysis this framework moves beyond predicting *if* a patient will face a mortality event, mapping out *when* and *how* compounding cardiovascular risk factors multiply a patient's baseline risk curve over time.
+This project analyzes a heart failure clinical records data set, [UCI Heart Failure Clinical Records dataset](https://github.com/vishnupriya62/DATASET-heart-failure-clinical-records/blob/main/heart_failure_clinical_records_dataset%20(1).csv), using Cox Proportional Hazards Model. Because of the nature of Survival Analysis this framework moves beyond predicting *if* a patient will face a mortality event, to mapping out *when* and *how* compounding cardiovascular risk factors multiply a patient's baseline risk curve over time.
  
 ---
 
