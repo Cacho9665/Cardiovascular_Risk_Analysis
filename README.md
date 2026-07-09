@@ -1,11 +1,11 @@
 # Cardiovascular_Risk_Analysis
 Analyzation of heart failure clinical records to find which variables had the biggest effect on overall health.
-# 🫀 Clinical Heart Failure Risk Stratification Framework
+# Clinical Heart Failure Risk Stratification Framework
 
 An end-to-end data science pipeline combining deep statistical survival modeling in R with a production-ready predictive web application deployed via Python and Streamlit.
 
-## 📌 Project Overview
-This project shifts away from traditional, snapshot binary classification to implement an **Advanced Clinical Pipeline (Survival Analysis)** using a **Cox Proportional Hazards Model**. By analyzing a cohort from the [UCI Heart Failure Clinical Records dataset](https://github.com/vishnupriya62/DATASET-heart-failure-clinical-records/blob/main/heart_failure_clinical_records_dataset%20(1).csv), the framework moves beyond predicting *if* a patient will face a mortality event, mapping out *when* and *how* compounding cardiorenal risk factors multiply a patient's baseline risk curve over time.
+## Project Overview
+This project analyzes a heart failure clinical records data set, [UCI Heart Failure Clinical Records dataset](https://github.com/vishnupriya62/DATASET-heart-failure-clinical-records/blob/main/heart_failure_clinical_records_dataset%20(1).csv), using Cox Proportional Hazards Model. Because of the nature of Survival Analysis this framework moves beyond predicting *if* a patient will face a mortality event, mapping out *when* and *how* compounding cardiovascular risk factors multiply a patient's baseline risk curve over time.
 
 ### Key Architecture
 *   **Phase A (Exploratory Data Analysis):** Discovered severe right-skewness in Biomarkers (CPK) necessitating log-transformations, and mapped out intersecting risk danger zones.
@@ -14,7 +14,7 @@ This project shifts away from traditional, snapshot binary classification to imp
 
 ---
 
-## 📊 Model Coefficients (From R `coxph`)
+## Model Coefficients (From R `coxph`)
 The underlying mathematical weights utilized in the interactive application are derived directly from the Cox proportional hazard calculations:
 
 | Clinical Feature | Log-Hazard Coefficient ($\beta$) | Hazard Ratio ($e^\beta$) | Clinical Interpretation |
@@ -28,7 +28,7 @@ The underlying mathematical weights utilized in the interactive application are 
 
 ---
 
-## 🛠️ Repository Structure
+## Repository Structure
 ```directory
 ├── CardioVasc_App.py          # Production Python Streamlit Web Dashboard
 ├── heart_failure_analysis.R    # Phase A/B R Script (EDA, Splits, Random Forest, CoxPH)
