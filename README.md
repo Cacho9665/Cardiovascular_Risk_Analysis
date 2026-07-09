@@ -5,6 +5,7 @@ Analyzation of heart failure clinical records to find which variables had the bi
 This project analyzes a heart failure clinical records data set, [UCI Heart Failure Clinical Records dataset](https://github.com/vishnupriya62/DATASET-heart-failure-clinical-records/blob/main/heart_failure_clinical_records_dataset%20(1).csv), using Cox Proportional Hazards Model. Because of the nature of Survival Analysis this framework moves beyond predicting *if* a patient will face a mortality event, mapping out *when* and *how* compounding cardiovascular risk factors multiply a patient's baseline risk curve over time.
  
 ---
+### Data Structure & Initial Checks
 
 ## Model Coefficients (From R `coxph`)
 After exploring the data I kept the variables deemed significant, while Aneamia and Serum sodium weren't necessarly significant as the p-value was greater than .05 i kept them in the model to preserve statistical power and provide more options for "potential users". The coefficiants used in the interactive app are taken from Cox proportional hazard calculations:
