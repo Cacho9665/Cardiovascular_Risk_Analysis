@@ -21,7 +21,7 @@ After exploring the data I kept the variables deemed significant, while Aneamia 
 | **High Blood Pressure** | `+0.47358` | `1.61` | History of hypertension scales baseline risk by 1.61x. |
 | **Anemia** | `+0.37902` | `1.46` | Retained to preserve domain validity regarding oxygen-delivery strain. |
 
-Below is the streamlit dashboard here
+Below is the interactive streamlit dashboard [here](https://cardiovascularriskanalysis-bw6peparf8bz2y5v5x3l2p.streamlit.app/)
 <img width="1797" height="898" alt="image" src="https://github.com/user-attachments/assets/6a1cc4a2-e2f6-4f0e-86d5-37a6d9385a21" />
 
 
