@@ -21,7 +21,7 @@ anemia = st.sidebar.selectbox("Anemia? (Yes/No)", ["No", "Yes"])
 hbp_val = 1 if hbp == "Yes" else 0
 anemia_val = 1 if anemia == "Yes" else 0
 
-hazard_eq = ((.04389694*age) + (-.04674244*ef) + (.30432512*creatinine) + (-.04339366*sodium) + (.47358261*hbp_val) + (.37902147*anemia_val))
+hazard_eq = ((.04389694*(age-60)) + (-.04674244*(ef-38)) + (.30432512*(creatinine-1.38)) + (-.04339366*(sodium-136)) + (.47358261*hbp_val) + (.37902147*anemia_val))
 
 #relative Hazard
 relative_hazard = np.exp(hazard_eq)
