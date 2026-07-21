@@ -35,7 +35,7 @@ A Cox Proportional Hazards regression (`coxph` in R) was fitted to quantify rela
 * **Clinical Monitoring:** Prioritize Serum Creatinine (routine renal function) and blood pressure monitoring for heart failure managment, as these represent the most actionable risk levers compared to unmodifiable factors like age.
 
 * **Dashboard Deployment:** Implementing an interactive risk calculator into cilinical work areas would help nurses quickly flag high risk patient profiles based on blood tests.
-[This](https://cardiovascularriskanalysis-bw6peparf8bz2y5v5x3l2p.streamlit.app/) is an interactive streamlit dashboard, like the one shown below.
+[This](https://cardiovascularriskanalysis-bw6peparf8bz2y5v5x3l2p.streamlit.app/) is the interactive streamlit dashboard.
 <img width="1797" height="898" alt="image" src="https://github.com/user-attachments/assets/6a1cc4a2-e2f6-4f0e-86d5-37a6d9385a21" />
 
 * **Data Constraints:** For a more accurate representation the sample size should be bigger and the demographic of patients in the dataset could be better. Because everyone in this dataset is ill to some degree, the averages on each clinical variable are more extreme than usually seen. The limiting age range is less of an issue because the average age of people significantly affected is going to be higher. 
