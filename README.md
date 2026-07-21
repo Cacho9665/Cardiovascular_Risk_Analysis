@@ -14,7 +14,7 @@ HR = Hazard ratio
 ## Data Structure & Model Specification
 
 ### Dataset Overview
-The analysis utilizes clinical records from $n = 299$ heart failure patients. The dataset includes demographic, clinical, and laboratory features captured during follow-up periods:
+The analysis utilizes clinical records from $299$ heart failure patients. The dataset includes demographic, clinical, and laboratory features captured during follow-up periods:
 
 * **Target Variables:** Survival time (`time` in days) and death event (`DEATH_EVENT`: 0 = Survived, 1 = Deceased).
 * **Key Clinical Features:** Age, Ejection Fraction, Serum Creatinine, Serum Sodium, High Blood Pressure, and Anemia.
