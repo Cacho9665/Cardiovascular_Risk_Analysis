@@ -1,13 +1,26 @@
 # Cardiovascular_Risk_Analysis
-Analyzation of heart failure clinical records to find which variables had the biggest effect on overall health.
 
 ## Project Overview
-This project analyzes a heart failure clinical records data set, [UCI Heart Failure Clinical Records dataset](https://github.com/vishnupriya62/DATASET-heart-failure-clinical-records/blob/main/heart_failure_clinical_records_dataset%20(1).csv), using Cox Proportional Hazards Model. Because of the nature of Survival Analysis this framework moves beyond predicting *if* a patient will face a mortality event, to mapping out *when* and *how* compounding cardiovascular risk factors multiply a patient's baseline risk curve over time.
+This analysis evaluates 299 heart failure patient records from the [UCI Heart Failure Clinical Records dataset](https://github.com/vishnupriya62/DATASET-heart-failure-clinical-records/blob/main/heart_failure_clinical_records_dataset%20(1).csv) using a Cox Proportional Hazards Model. The objective is to identify key compounding clinical risk factors (e.g., ejection fraction and serum creatinine) to assist healtch care providers in stratifying patient mortality risk and prioritizing proactive intervention strategies.
  
 ---
+## Summary
+HR = Hazard ratio
+* **Primary Risk Drivers:** High blood pressure (HR = 1.61) and elevated serum creatinine (HR = 1.36) are the strongest compounding predictors of mortality
+* **Protective Factors:** Higher ejection fraction (HR = .95) significantly buffers mortality risk, where each unit increase reduces the baseline hazard by 5%.
+* **Compounding Risk Threshold:** The top left of this image shows how compounded cardiovascular issues can greatly increase risk.
+<img width="675" height="552" alt="image" src="https://github.com/user-attachments/assets/d427da1b-1796-4348-ad02-9c7e91294399" />
 
-## Model Coefficients (From R `coxph`)
-Before analysis, checks were conducted to be familiarized with the dataset seen in [here](C:/Users/Owner/Documents/EDA_Cardio.R). After exploring the data I kept the variables deemed significant, while Aneamia and Serum sodium weren't necessarly significant, as the p-value was greater than .05, I kept them in the model to preserve statistical power and because it didn't seen necessary to remove them. The coefficiants used in the interactive app are taken from Cox proportional hazard calculations:
+## Data Structure & Model Specification
+
+### Dataset Overview
+The analysis utilizes clinical records from $n = 299$ heart failure patients. The dataset includes demographic, clinical, and laboratory features captured during follow-up periods:
+
+* **Target Variables:** Survival time (`time` in days) and death event (`DEATH_EVENT`: 0 = Survived, 1 = Deceased).
+* **Key Clinical Features:** Age, Ejection Fraction, Serum Creatinine, Serum Sodium, High Blood Pressure, and Anemia.
+
+### Cox Proportional Hazards Model Coefficients
+A Cox Proportional Hazards regression (`coxph` in R) was fitted to quantify relative hazard ratios across significant clinical predictors. Non-statistically significant variables with high clinical relevance (e.g., Anemia, Serum Sodium) were retained to preserve statistical power and because they are crucial for accurately capturing the medical realities of body-wide oxygen levels and low blood sodium risks
 
 | Clinical Feature | Log-Hazard Coefficient ($\beta$) | Hazard Ratio ($e^\beta$) | Clinical Interpretation |
 | :--- | :--- | :--- | :--- |
@@ -17,13 +30,13 @@ Before analysis, checks were conducted to be familiarized with the dataset seen 
 | **Serum Sodium** | `-0.04339` | `0.96` | Dropping levels (Hyponatremia) compound baseline systemic risk. |
 | **High Blood Pressure** | `+0.47358` | `1.61` | History of hypertension scales baseline risk by 1.61x. |
 | **Anemia** | `+0.37902` | `1.46` | Retained to preserve domain validity regarding oxygen-delivery strain. |
+**Technical Details:** Full Exploratory Data Analysis (EDA) and modeling scripts can be found in [`EDA_Cardio.R`](./EDA_Cardio.R) and [`Modeling_cardio.R`](./Modeling_cardio.R).
 
 Below is the interactive streamlit dashboard [here](https://cardiovascularriskanalysis-bw6peparf8bz2y5v5x3l2p.streamlit.app/)
 <img width="1797" height="898" alt="image" src="https://github.com/user-attachments/assets/6a1cc4a2-e2f6-4f0e-86d5-37a6d9385a21" />
 
 
 ---
-## Summary
-After going through all the variables we come out with 6 that are more significant to predicting mortality than any of the others. Age, Ejection Fraction, Serum Creatinine, Serum Sodium, High Blood Pressure, and Anemia. Of course age isn't something we can control, but the compounding effects of each of these health issues have a real hurtful effect on quality and length of life. Below is an example of how compounding issues affect the proportion of deaths, to the left of the vertical line and above the horizontal line are where issues start to arise.  
 
-<img width="675" height="552" alt="image" src="https://github.com/user-attachments/assets/d427da1b-1796-4348-ad02-9c7e91294399" />
+
+
