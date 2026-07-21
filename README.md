@@ -30,7 +30,7 @@ A Cox Proportional Hazards regression (`coxph` in R) was fitted to quantify rela
 | **Serum Sodium** | `-0.04339` | `0.96` | Dropping levels (Hyponatremia) compound baseline systemic risk. |
 | **High Blood Pressure** | `+0.47358` | `1.61` | History of hypertension scales baseline risk by 1.61x. |
 | **Anemia** | `+0.37902` | `1.46` | Retained to preserve domain validity regarding oxygen-delivery strain. |
-**Technical Details:** Full Exploratory Data Analysis (EDA) and modeling scripts can be found in [`EDA_Cardio.R`](./EDA_Cardio.R) and [`Modeling_cardio.R`](./Modeling_cardio.R).
+> **Technical Details:** Full Exploratory Data Analysis (EDA) and modeling scripts can be found in [`EDA_Cardio.R`](./EDA_Cardio.R) and [`Modeling_cardio.R`](./Modeling_cardio.R).
 ## Recommendations & Limitations
 * **Clinical Monitoring:** Prioritize Serum Creatinine (routine renal function) and blood pressure monitoring for heart failure managment, as these represent the most actionable risk levers compared to unmodifiable factors like age.
 
@@ -38,7 +38,7 @@ A Cox Proportional Hazards regression (`coxph` in R) was fitted to quantify rela
 [This](https://cardiovascularriskanalysis-bw6peparf8bz2y5v5x3l2p.streamlit.app/) is an interactive streamlit dashboard, like the one shown below.
 <img width="1797" height="898" alt="image" src="https://github.com/user-attachments/assets/6a1cc4a2-e2f6-4f0e-86d5-37a6d9385a21" />
 
-* **Data Constraints:** For a more accurate representation the sample size should be bigger and the demographic of patients in the dataset could be better. Because everyone in this dataset is ill to some degree, the averages on each clinical variable are more extreme than usually seen. Aswell as the limit in age though that is less of an issue because the average age of people significantly affected is going to be higher. 
+* **Data Constraints:** For a more accurate representation the sample size should be bigger and the demographic of patients in the dataset could be better. Because everyone in this dataset is ill to some degree, the averages on each clinical variable are more extreme than usually seen. The limiting age range is less of an issue because the average age of people significantly affected is going to be higher. 
 
 ---
 
